@@ -17,7 +17,7 @@ export const importGlob = options => ({
 
       const read = path => readFile(`${options.cwd}/${path}`)
         .then(parse)
-        .catch(result.error)
+        .catch(node.error)
 
       const css = await glob(pattern, options, read)
       node.replaceWith(...css)
