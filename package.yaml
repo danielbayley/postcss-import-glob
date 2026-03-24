@@ -27,8 +27,13 @@ funding: https://github.com/danielbayley/postcss-import-glob?sponsor=1
 license: MIT
 
 type: module
+imports:
+  "#utils": &utils ./lib/utils.js
+  "#test": ./lib/test.js
 exports: &index ./index.js
-files: [*index]
+files:
+- *index
+- *utils
 publishConfig:
   access: public
 
