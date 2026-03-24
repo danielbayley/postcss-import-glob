@@ -1,5 +1,5 @@
 # https://docs.npmjs.com/cli/configuring-npm/package-json
-version: 0.1.1
+version: 0.1.2
 name: postcss-import-glob
 description: PostCSS plugin to inline CSS @imports, with support for glob patterns.
 keywords:
