@@ -116,5 +116,8 @@ describe("`importGlob`", async () => {
 
     it("matches 'globstar' patterns",
       assert.trim.equal(await test(`@import "*${pattern}";`), css + append))
+
+    it("ignores unmatched `@import`s by resolving to empty space",
+      assert.equal(await test('@import "-";'), ""))
   })
 })
