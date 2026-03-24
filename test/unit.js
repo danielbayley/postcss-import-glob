@@ -27,6 +27,13 @@ describe("utils", () => {
 
     it("`return`s the directory path itself, given a folder",
       assert.equal(basedir(dirname), dirname))
+
+    it("else `return`s the `c`urrent `w`orking `d`irectory", () => {
+      const cwd = process.cwd()
+      assert.equal(basedir(), cwd)
+      assert.equal(basedir(null), cwd)
+      assert.equal(basedir(undefined), cwd)
+    })
   })
 
   describe("`glob`", async () => {
