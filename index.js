@@ -20,6 +20,9 @@ export const importGlob = options => ({
         .catch(node.error)
 
       const css = await glob(pattern, options, read)
+      if (css.length === 0)
+        node.warn(result, `${node.params} did not match any files`)
+
       node.replaceWith(...css)
 
       const metadata = css.map(file => ({
