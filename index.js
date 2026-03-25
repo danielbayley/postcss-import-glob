@@ -11,13 +11,11 @@ export const importGlob = options => ({
       options.globstar ??= true
 
       const parent = result.opts.from
-      const path = node.source.input.file ?? parent
+      const path = resolve(node.source.input.file ?? parent)
       const pattern = raw(node.params)
       options.cwd ??= basedir(path)
 
-      const read = path => readFile(`${options.cwd}/${path}`)
-        .then(parse)
-        .catch(node.error)
+      const read = path => readFile(path).then(parse).catch(node.error)
 
       const css = await glob(pattern, options, read)
       if (css.length === 0)
