@@ -1,3 +1,4 @@
+import { resolve } from "node:path"
 import { basedir, glob, readFile, raw } from "#utils"
 
 import metadata from "./package.json" with { type: "json" }
