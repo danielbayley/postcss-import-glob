@@ -14,7 +14,7 @@ keywords:
 - styles
 - stylesheets
 
-homepage: https://npm.im/postcss-import-glob
+homepage: https://github.com/danielbayley/postcss-import-glob#readme
 repository: danielbayley/postcss-import-glob
 bugs: https://github.com/danielbayley/postcss-import-glob/issues
 
